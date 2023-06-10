@@ -1,0 +1,234 @@
+// node-sass styles.scss -wo .
+
+html,
+body,
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  font-family: "Mona-Sans", sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  // background-color: #252525;
+  background: linear-gradient(135deg, #252525, #101010);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .introduction {
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    .top {
+      display: flex;
+
+      .greetings {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-size: 24px;
+        font-weight: 600;
+        column-gap: 10px;
+
+        .link {
+          cursor: pointer;
+          line-height: 0;
+
+          img {
+            height: 28px;
+            filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
+              brightness(106%) contrast(103%) drop-shadow(0px 0px 10px #0075ff);
+            transition: all 0.2s;
+          }
+
+          &:hover img {
+            filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
+              brightness(106%) contrast(103%) drop-shadow(0px 0px 15px #0075ff);
+          }
+        }
+      }
+    }
+
+    .name {
+      font-size: 100px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .details {
+      display: flex;
+      align-items: flex-start;
+
+      .profession {
+        font-size: 26px;
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      .name {
+        font-size: 80px;
+      }
+      .top {
+        .greetings {
+          font-size: 18px;
+        }
+        .links .link img {
+          height: 24px;
+        }
+      }
+      .details {
+        .stokerbr-text {
+          font-size: 28px;
+          &.aka {
+            font-size: 18px;
+          }
+        }
+        .profession {
+          font-size: 22px;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      .name {
+        font-size: 60px;
+      }
+      .top {
+        .greetings {
+          font-size: 14px;
+        }
+        .links .link img {
+          height: 20px;
+        }
+      }
+      .details {
+        .stokerbr-text {
+          font-size: 24px;
+          &.aka {
+            font-size: 14px;
+          }
+        }
+        .profession {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media (max-width: 575px) {
+      .name {
+        font-size: 50px;
+      }
+      .top {
+        flex-direction: column-reverse;
+        .links {
+          margin-left: 0;
+          margin-bottom: 10px;
+          .link img {
+            height: 18px;
+          }
+        }
+      }
+      .details {
+        .stokerbr-text {
+          font-size: 22px;
+          &.aka {
+            font-size: 12px;
+          }
+        }
+        .profession {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .soon {
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+  }
+}
+
+.stokerbr-text {
+  background-color: #0075ff;
+  background-image: linear-gradient(135deg, #0075ff, #1479ea);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: 200;
+  text-shadow: 0px 0px 10px #0075ff;
+  margin: 0;
+  // cursor: default;
+
+  &.aka {
+    font-size: 20px;
+  }
+
+  /* @media (max-width: 1199px) {
+        font-size: 28px;
+        &.aka {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 767px) {
+        font-size: 24px;
+        &.aka {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 575px) {
+        font-size: 20px;
+        &.aka {
+            font-size: 10px;
+        }
+    } */
+}
+
+.bubble-text {
+  font-weight: 200;
+
+  .bubble-hover {
+    transition: all 0.2s;
+
+    &.active {
+      &.main {
+        font-weight: 900;
+        color: #0095ff;
+      }
+      &.adjacent-1 {
+        font-weight: 700;
+        color: #0090ff;
+      }
+      &.adjacent-2 {
+        font-weight: 500;
+        color: #0085ff;
+      }
+      &.adjacent-3 {
+        font-weight: 300;
+        color: #0080ff;
+      }
+    }
+  }
+}
