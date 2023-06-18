@@ -1,50 +1,61 @@
 <template>
-  <div class="content-wrapper">
+  <Header />
+  <div class="introduction-wrapper">
     <IntroductionSection />
-    <p class="soon">Portfólio em construção... 🚧</p>
+    <p class="soon">{{ $t('under_construction') }}</p>
   </div>
+  <!-- <div class="content-wrapper container">
+    <div class="placeholder">
+      <h3>Teste</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cumque
+        quia aliquid fuga eaque libero aperiam fugiat obcaecati id enim.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+        similique iusto. Velit facere minima temporibus officia veritatis
+        inventore cupiditate quibusdam vero enim accusantium placeat ut
+        exercitationem eum sunt, deserunt neque nam laudantium rem fugit libero
+        aliquid, adipisci laboriosam! Mollitia, eum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+        similique iusto. Velit facere minima temporibus officia veritatis
+        inventore cupiditate quibusdam vero enim accusantium placeat ut
+        exercitationem eum sunt, deserunt neque nam laudantium rem fugit libero
+        aliquid, adipisci laboriosam! Mollitia, eum.
+      </p>
+    </div>
+  </div> -->
 </template>
 
-<script setup>
-const { locale, locales, setLocale } = useI18n();
-
-onMounted(() => {
-  /* if (localStorage.getItem("locale")) {
-    setLocale(localStorage.getItem("locale"));
-  } */
-  /* let userLang = navigator.language || navigator.userLanguage || "en";
-  userLang = userLang.substr(0, 2);
-
-  if (localStorage.getItem("locale") != userLang) {
-    setLocale(userLang);
-  }
-  
-  localStorage.setItem("locale", userLang);
-  locale.value = userLang; */
-});
-</script>
+<script setup></script>
 
 <style lang="scss">
-@import "@/assets/scss/variables.scss";
-@import url("https://fonts.cdnfonts.com/css/mona-sans");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/container.scss';
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 
 html,
 body,
-#__nuxt,
-.content-wrapper {
+#__nuxt {
   width: 100%;
   height: 100%;
-  font-family: "Mona-Sans", sans-serif;
+  font-family: 'Mona-Sans', sans-serif;
   color: white;
+  position: relative;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #252525, #101010);
+  background-color: #252525;
 }
 
-.content-wrapper {
+.introduction-wrapper {
+  background: linear-gradient(135deg, #252525, #101010);
+  // height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

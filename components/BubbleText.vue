@@ -6,11 +6,11 @@ const props = defineProps({
   },
   element: {
     type: String,
-    default: "span",
+    default: 'span',
   },
   className: {
     type: String,
-    default: "",
+    default: '',
   },
   size: {
     type: Number,
@@ -21,15 +21,15 @@ const props = defineProps({
 const bubbleHovers = ref([]);
 
 // Splits the text into characters and creates the bubble-hovers
-let characters = props.text.split("");
+let characters = props.text.split('');
 characters.forEach((character) => {
-  bubbleHovers.value.push({ char: character, active: false, class: "" });
+  bubbleHovers.value.push({ char: character, active: false, class: '' });
 });
 
 // Performs the bubble-hover effect
 function handleBubbleHover(index) {
   for (let i = 0; i <= props.size; i++) {
-    let bubbleClass = i == 0 ? "main" : `adjacent-${i}`;
+    let bubbleClass = i == 0 ? 'main' : `adjacent-${i}`;
 
     activateBubbleHover(index - i, bubbleClass);
     activateBubbleHover(index + i, bubbleClass);
@@ -47,7 +47,7 @@ function activateBubbleHover(index, bubbleClass) {
 // Deactivates the bubble-hovers
 function handleBubbleHoverOut() {
   bubbleHovers.value.forEach((bubbleHover) => {
-    bubbleHover.class = "";
+    bubbleHover.class = '';
     bubbleHover.active = false;
   });
 }
@@ -83,19 +83,19 @@ function handleBubbleHoverOut() {
     &.active {
       &.main {
         font-weight: 900;
-        color: #80bbff;
+        color: #4099ff;
       }
       &.adjacent-1 {
         font-weight: 700;
-        color: #60aaff;
+        color: #3091ff;
       }
       &.adjacent-2 {
         font-weight: 500;
-        color: #4099ff;
+        color: #2088ff;
       }
       &.adjacent-3 {
         font-weight: 300;
-        color: #2088ff;
+        color: #1080ff;
       }
     }
   }

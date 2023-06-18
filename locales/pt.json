@@ -1,6 +1,8 @@
 {
+  "change_language": "Mudar idioma",
   "introduction": {
     "greetings": "Olá 👋! Eu sou",
     "profession": "Desenvolvedor <br> Full-Stack"
-  }
+  },
+  "under_construction": "Portfólio em construção... 🚧"
 }

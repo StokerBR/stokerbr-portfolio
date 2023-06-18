@@ -1,6 +1,8 @@
 {
+  "change_language": "Change language",
   "introduction": {
     "greetings": "Hi 👋! I am",
     "profession": "Full-Stack <br> Developer"
-  }
+  },
+  "under_construction": "Portfolio under construction... 🚧"
 }
