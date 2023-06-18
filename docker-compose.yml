@@ -1,10 +1,9 @@
-version: "3.8"
+version: '3.8'
 services:
   portfolio:
-    container_name: "stokerbr_portfolio"
-    image: "stokerbr_portfolio"
-    build:
-      context: .
+    container_name: 'stokerbr_portfolio'
+    # image: "stokerbr_portfolio"
+    build: .
     ports:
       - 8080:3000
     restart: unless-stopped
