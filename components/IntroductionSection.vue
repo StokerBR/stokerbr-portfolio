@@ -3,7 +3,7 @@
 <template>
   <div class="introduction">
     <div class="top">
-      <h3 class="greetings">{{ $t("introduction.greetings") }}</h3>
+      <h3 class="greetings">{{ $t('introduction.greetings') }}</h3>
       <div class="links">
         <a href="https://github.com/StokerBR" target="_blank" class="link">
           <img src="~/assets/icons/github.svg" alt="GitHub" title="GitHub" />
@@ -40,8 +40,8 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/stokerbr-text.scss";
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/stokerbr-text.scss';
 .introduction {
   h1,
   h2,
@@ -72,15 +72,13 @@
         img {
           height: 28px;
           filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
-            brightness(106%) contrast(103%)
-            drop-shadow(0px 0px 10px $primary-color);
+            brightness(106%) contrast(103%) drop-shadow($neon-box-shadow);
           transition: all 0.2s;
         }
 
         &:hover img {
           filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
-            brightness(106%) contrast(103%)
-            drop-shadow(0px 0px 15px $primary-color);
+            brightness(106%) contrast(103%) drop-shadow($neon-box-shadow-large);
         }
       }
     }
