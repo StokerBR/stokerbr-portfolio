@@ -1,10 +1,16 @@
 $primary-color: #0075ff;
+$secondary-color: #003c80;
+$dark-color: #001e40;
+$heading-color: #e6e6e6;
+$text-color: #bfbfbf;
+// $background-color: #252525;
+$background-color: #001329;
 $neon-box-shadow: 0 0 10px #0075ff;
 $neon-box-shadow-large: 0 0 15px #0075ff;
 
 $colors: (
   'primary': $primary-color,
-  'secondary': #6c757d,
+  'secondary': $secondary-color,
   'success': #28a745,
   'info': #17a2b8,
   'warning': #ffc107,

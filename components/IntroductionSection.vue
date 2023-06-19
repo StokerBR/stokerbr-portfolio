@@ -40,13 +40,16 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/variables.scss';
-@import '@/assets/scss/stokerbr-text.scss';
+@import '@/assets/scss/components/stokerbr-text.scss';
 .introduction {
   h1,
   h2,
   h3 {
     margin: 0;
+  }
+
+  h1 {
+    color: white;
   }
 
   .top {
@@ -72,13 +75,18 @@
         img {
           height: 28px;
           filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
-            brightness(106%) contrast(103%) drop-shadow($neon-box-shadow);
+            brightness(106%) contrast(103%) /* drop-shadow($neon-box-shadow) */;
+          // filter: invert(20%) sepia(99%) saturate(1949%) hue-rotate(201deg)
+          // brightness(100%) contrast(101%);
           transition: all 0.2s;
         }
 
         &:hover img {
-          filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
-            brightness(106%) contrast(103%) drop-shadow($neon-box-shadow-large);
+          // transform: scale(1.1);
+          transform: translateY(-3px);
+          // filter: invert(26%) sepia(100%) saturate(2849%) hue-rotate(205deg)
+          // brightness(106%) contrast(103%)
+          /* drop-shadow($neon-box-shadow-large) */
         }
       }
     }

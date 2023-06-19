@@ -1,13 +1,23 @@
 <template>
   <div class="languages">
-    <img src="~/assets/icons/us_flag.svg" class="flag" title="EN-US" />
+    <img
+      src="~/assets/icons/us_flag.svg"
+      class="flag"
+      title="EN-US"
+      @click="checked = false"
+    />
     <input
       type="checkbox"
       :title="$t('change_language')"
       class="language-switch"
       v-model="checked"
     />
-    <img src="~/assets/icons/br_flag.svg" class="flag" title="PT-BR" />
+    <img
+      src="~/assets/icons/br_flag.svg"
+      class="flag"
+      title="PT-BR"
+      @click="checked = true"
+    />
   </div>
 </template>
 
@@ -25,18 +35,18 @@ watch(checked, (value) => {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/variables.scss';
-
 .languages {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 5px;
+  user-select: none;
 
   img.flag {
     height: 20px;
     border-radius: 2px;
     // border: 2px solid $primary-color;
+    cursor: pointer;
   }
 
   .language-switch {
@@ -47,14 +57,14 @@ watch(checked, (value) => {
     position: relative;
     margin: 0;
     border: 2px solid $primary-color;
-    background: linear-gradient(180deg, #252525, #101010);
+    background: linear-gradient(180deg, #001e40, #001329);
     transition: all 0.2s ease;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
-    box-shadow: 0px 0px 10px $primary-color, inset 0px 0px 10px $primary-color;
+    // box-shadow: 0px 0px 10px $primary-color, inset 0px 0px 10px $primary-color;
 
     &:focus {
       outline: 0;

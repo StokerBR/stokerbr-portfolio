@@ -18,13 +18,22 @@ export default defineNuxtConfig({
       },
     ],
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/scss/app.scss";',
+        },
+      },
+    },
+  },
   app: {
     head: {
       title: 'StokerBR',
       meta: [
         {
           name: 'description',
-          content: 'This is the home page',
+          content: 'Full-Stack Developer',
         },
         {
           name: 'msapplication-TileColor',
