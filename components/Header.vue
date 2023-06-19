@@ -1,8 +1,19 @@
 <template>
-  <header>
-    <div :class="['header-inner', { transparent: transparent }]">
+  <header
+    :class="{
+      /* hidden: isHidden */
+    }"
+  >
+    <div class="header-inner">
       <div class="header-left">
-        <BubbleText text="StokerBR" class="stokerbr-text" element="h3" />
+        <BubbleText
+          ref="bubbleText"
+          text="StokerBR"
+          class="stokerbr-text"
+          element="h3"
+          :startupEffect="true"
+          @click="scrollToTop"
+        />
       </div>
       <LanguageSwitch />
       <div class="blur"></div>
@@ -11,24 +22,43 @@
 </template>
 
 <script setup>
+const bubbleText = ref();
+const isTransparent = ref(true);
+const isHidden = ref(false);
+let lastScrollY = 0;
+
 onMounted(() => {
-  window.addEventListener('scroll', onScroll);
+  // bubbleText.value.runWaveEffect();
+
+  lastScrollY = window.scrollY;
+  handleScroll();
+  window.addEventListener('scroll', handleScroll);
 });
 onUnmounted(() => {
-  window.removeEventListener('scroll', onScroll);
+  window.removeEventListener('scroll', handleScroll);
 });
 
-const transparent = ref(true);
+// Handles the scroll event
+function handleScroll() {
+  // Makes the header background transparent when at the top of the page
+  isTransparent.value = window.scrollY == 0;
 
-function onScroll() {
-  transparent.value = window.scrollY == 0;
+  // Hides the header when scrolling down and shows it when scrolling up
+  if (window.scrollY > lastScrollY) {
+    isHidden.value = true;
+  } else {
+    isHidden.value = false;
+  }
+  lastScrollY = window.scrollY;
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/variables.scss';
-@import '@/assets/scss/stokerbr-text.scss';
-@import '@/assets/scss/container.scss';
+@import '@/assets/scss/components/stokerbr-text.scss';
 
 header {
   display: flex;
@@ -37,56 +67,39 @@ header {
   width: 100%;
   height: fit-content;
   z-index: 100;
+  transition: all 0.2s;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
 
   .header-inner {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 50px;
     width: 100%;
     margin: 15px;
     padding: 15px;
-    border: 2px solid $primary-color;
-    border-radius: 10px;
-    box-shadow: $neon-box-shadow, inset $neon-box-shadow;
-    // background-color: #25252500;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    // box-shadow: $neon-box-shadow, inset $neon-box-shadow;
+    // background-color: $background-color;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 24px;
     font-weight: 600;
     transition: all 0.2s;
-    background-color: rgb(37 37 37 / 80%);
+    background-color: rgba(0, 30, 64, 0.85);
     backdrop-filter: blur(10px);
-
-    &.transparent {
-      background-color: rgb(37 37 37 / 0%);
-      backdrop-filter: blur(0px);
-    }
-
-    /* .blur {
-      backdrop-filter: blur(10px);
-      position: absolute;
-      height: calc(100% + 10px);
-      // height: 100%;
-      width: calc(100% + 10px);
-      // width: 100%;
-      z-index: -1;
-    } */
-
-    /* &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      backdrop-filter: blur(10px);
-    } */
 
     .header-left {
       margin-right: auto;
 
       .stokerbr-text {
+        font-size: 28px;
         cursor: pointer;
+        user-select: none;
       }
     }
 

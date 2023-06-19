@@ -1,4 +1,6 @@
 <script setup>
+import { timeout } from '@/assets/utils/functions.js';
+
 const props = defineProps({
   text: {
     type: String,
@@ -51,6 +53,19 @@ function handleBubbleHoverOut() {
     bubbleHover.active = false;
   });
 }
+
+// Runs the startup effect
+async function runWaveEffect() {
+  for (let i = 0; i < bubbleHovers.value.length; i++) {
+    handleBubbleHover(i);
+    await timeout(100);
+    handleBubbleHoverOut();
+  }
+}
+
+defineExpose({
+  runWaveEffect,
+});
 </script>
 
 <template>
