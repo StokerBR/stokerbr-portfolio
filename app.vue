@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-const isLoading = ref(false);
+const isLoading = ref(true);
 const mouse = ref({ x: 0, y: 0 });
 
 onMounted(() => {
@@ -67,7 +67,7 @@ body,
 }
 
 .wrapper {
-  // "Shimmer" effect
+  // Cursor glow effect
   &::before {
     border-radius: inherit;
     content: '';
