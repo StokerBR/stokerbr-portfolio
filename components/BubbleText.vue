@@ -1,5 +1,5 @@
 <script setup>
-import { timeout } from '@/assets/utils/functions.js';
+import { timeout, isMobile } from '@/assets/utils/functions.js';
 
 const props = defineProps({
   text: {
@@ -63,6 +63,22 @@ async function runWaveEffect() {
   }
 }
 
+// Deactivates and reactivates the bubble-hover on click
+function onClick(index) {
+  handleBubbleHoverOut();
+  setTimeout(() => {
+    handleBubbleHover(index);
+  }, 100);
+}
+
+// Activates and deactivates the bubble-hover on click
+function onClickMobile(index) {
+  handleBubbleHover(index);
+  setTimeout(() => {
+    handleBubbleHoverOut();
+  }, 100);
+}
+
 defineExpose({
   runWaveEffect,
 });
@@ -83,6 +99,15 @@ defineExpose({
       ]"
       @mouseover="() => handleBubbleHover(index)"
       @mouseout="handleBubbleHoverOut"
+      @click="
+        () => {
+          if (isMobile()) {
+            onClickMobile(index);
+          } else {
+            onClick(index);
+          }
+        }
+      "
       >{{ bubbleHover.char }}</span
     >
   </component>

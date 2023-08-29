@@ -4,6 +4,7 @@ services:
     container_name: 'stokerbr_portfolio'
     # image: "stokerbr_portfolio"
     build: .
+    pull_policy: build
     ports:
       - 8080:3000
     restart: unless-stopped
