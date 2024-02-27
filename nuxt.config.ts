@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n'],
+  components: [
+    { path: '~/components', extensions: ['vue'] },
+    { path: '~/components/sections', extensions: ['vue'] },
+  ],
   i18n: {
     vueI18n: './i18n.config.ts',
     precompile: {
@@ -37,7 +41,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'msapplication-TileColor',
-          content: '#252525',
+          content: '#001e40',
         },
         {
           name: 'msapplication-TileImage',
@@ -49,7 +53,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'theme-color',
-          content: '#252525',
+          content: '#0075ff',
         },
       ],
       link: [
@@ -77,7 +81,7 @@ export default defineNuxtConfig({
         {
           rel: 'mask-icon',
           href: '/assets/safari-pinned-tab.svg',
-          color: '#252525',
+          color: '#003c80',
         },
         {
           rel: 'shortcut icon',

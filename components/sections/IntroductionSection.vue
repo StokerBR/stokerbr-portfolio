@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="introduction">
+  <section class="introduction">
     <div class="top">
-      <h3 class="greetings">{{ $t('introduction.greetings') }}</h3>
+      <span class="greetings" v-html="$t('introduction.greetings')"></span>
       <div class="links">
         <a href="https://github.com/StokerBR" target="_blank" class="link">
           <img src="~/assets/icons/github.svg" alt="GitHub" title="GitHub" />
@@ -28,30 +28,21 @@
         </a>
       </div>
     </div>
-    <h1 class="name">Henrique</h1>
+    <span class="name">Henrique</span>
     <div class="details">
       <div class="stokerbr">
         <span class="stokerbr-text aka">AKA</span>
-        <BubbleText text="StokerBR" class="stokerbr-text" element="h2" />
+        <BubbleText text="StokerBR" class="stokerbr-text" />
       </div>
-      <h2 class="profession" v-html="$t('introduction.profession')"></h2>
+      <span class="profession" v-html="$t('introduction.profession')"></span>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/components/stokerbr-text.scss';
+
 .introduction {
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-  }
-
-  h1 {
-    color: white;
-  }
-
   .top {
     display: flex;
 
@@ -96,11 +87,16 @@
     font-size: 100px;
     font-weight: 900;
     text-transform: uppercase;
+    color: white;
   }
 
   .details {
     display: flex;
     align-items: flex-start;
+
+    .stokerbr-text {
+      display: block;
+    }
 
     .profession {
       font-size: 26px;

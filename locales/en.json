@@ -1,7 +1,7 @@
 {
   "change_language": "Change language",
   "introduction": {
-    "greetings": "Hi 👋! I am",
+    "greetings": "Hi <span class=\"hand-emoji\">👋</span>! I am",
     "profession": "Full-Stack <br> Developer"
   },
   "under_construction": "Portfolio under construction... 🚧"
