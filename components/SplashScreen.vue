@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ loader: true, fadeout: !isLoading }">
+  <div :class="{ loader: true, fadeout: !showSplash }">
     <BubbleText
       ref="bubbleText"
       text="StokerBR"
@@ -12,7 +12,7 @@
 import { timeout } from '~/assets/utils/functions';
 
 const props = defineProps({
-  isLoading: {
+  showSplash: {
     type: Boolean,
     required: true,
   },
@@ -21,7 +21,7 @@ const bubbleText = ref(null);
 
 async function loading() {
   await timeout(500);
-  while (props.isLoading) {
+  while (props.showSplash) {
     bubbleText.value.runWaveEffect();
     await timeout(2000);
   }

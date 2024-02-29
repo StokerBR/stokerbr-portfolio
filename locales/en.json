@@ -1,8 +1,17 @@
 {
   "change_language": "Change language",
   "introduction": {
-    "greetings": "Hi 👋! I am",
+    "greetings": "Hi <span class=\"hand-emoji\">👋</span>! I am",
     "profession": "Full-Stack <br> Developer"
   },
-  "under_construction": "Portfolio under construction... 🚧"
+  "under_construction": "Portfolio under construction... 🚧",
+  "sections": {
+    "about": {
+      "title": "About me",
+      "content": "<p>Hello, I'm Henrique Martins Costa, a passionate Full-Stack developer with over 3 years of experience, working mainly with Laravel, PostgreSQL, Flutter, JavaScript, HTML, and CSS.</p> <p>I'm studying Software Engineering at the <a href=\"https://ufg.br\" target=\"_blank\">Federal University of Goiás (UFG)</a>, and I'm dedicated to building efficient and scalable solutions, always aiming for code quality and maintainability.</p> <p>My professional journey includes creating robust web systems and cross-platform mobile applications, as well as leading and collaborating with teams to deliver projects that exceed expectations.</p> <p>I am always looking for new knowledge and challenges, and I strongly believe in the power of teamwork for project success.</p>"
+    },
+    "skills": {
+      "title": "My Skills"
+    }
+  }
 }
