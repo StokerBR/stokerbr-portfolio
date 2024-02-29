@@ -44,8 +44,8 @@ import skills from '@/data/skills.json';
       border-radius: 5px;
       background-color: $dark-color;
       padding: 5px;
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       margin: 5px;
       transition: all 200ms linear;
 
@@ -60,15 +60,15 @@ import skills from '@/data/skills.json';
     }
 
     .size-2 {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       grid-column-end: span 2;
       grid-row-end: span 2;
     }
 
     .size-3 {
-      width: 115px;
-      height: 115px;
+      width: 100px;
+      height: 100px;
       grid-column-end: span 3;
       grid-row-end: span 3;
     }

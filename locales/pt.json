@@ -4,5 +4,16 @@
     "greetings": "Olá <span class=\"hand-emoji\">👋</span>! Eu sou",
     "profession": "Desenvolvedor <br> Full-Stack"
   },
-  "under_construction": "Portfólio em construção... 🚧"
+  "under_construction": "Portfólio em construção... 🚧",
+  "about_me": "Sobre mim",
+  "my_skills": "Minhas skills",
+  "sections": {
+    "about": {
+      "title": "Sobre mim",
+      "content": "<p>Olá, sou Henrique Martins Costa, um apaixonado desenvolvedor Full-Stack com mais de 3 anos de experiência, trabalhando principalmente com Laravel, PostgreSQL, Flutter, JavaScript, HTML, e CSS.</p><p>Estou cursando Engenharia de Software na <a href=\"https://ufg.br\" target=\"_blank\">Universidade Federal de Goiás (UFG)</a>, e me dedico a construir soluções eficientes e escaláveis, visando sempre a qualidade e manutenibilidade do código.</p><p>Minha jornada profissional inclui a criação de sistemas web robustos e aplicações móveis multi-plataforma, além de liderar e colaborar com equipes para entregar projetos que excedam as expectativas.</p><p>Estou sempre em busca de novos conhecimentos e desafios, e acredito fortemente no poder do trabalho em equipe para o sucesso dos projetos.</p>"
+    },
+    "skills": {
+      "title": "Minhas skills"
+    }
+  }
 }

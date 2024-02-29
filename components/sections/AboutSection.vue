@@ -1,29 +1,12 @@
 <template>
-  <section>
+  <section id="about">
     <div class="content-wrapper container">
       <div class="about">
-        <h3>Sobre</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cumque
-          quia aliquid fuga eaque libero aperiam fugiat obcaecati id enim.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-          similique iusto. Velit facere minima temporibus officia veritatis
-          inventore cupiditate quibusdam vero enim accusantium placeat ut
-          exercitationem eum sunt, deserunt neque nam laudantium rem fugit
-          libero aliquid, adipisci laboriosam! Mollitia, eum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-          similique iusto. Velit facere minima temporibus officia veritatis
-          inventore cupiditate quibusdam vero enim accusantium placeat ut
-          exercitationem eum sunt, deserunt neque nam laudantium rem fugit
-          libero aliquid, adipisci laboriosam! Mollitia, eum.
-        </p>
-        <br /><br /><br />
+        <SectionHeading :text="$t('sections.about.title')" />
+        <div v-html="$t('sections.about.content')" />
       </div>
       <div class="skills-wrapper">
+        <SectionHeading :text="$t('sections.skills.title')" :secondary="true" />
         <Skills />
       </div>
     </div>
@@ -35,13 +18,13 @@
 <style lang="scss" scoped>
 .content-wrapper {
   display: flex;
-
-  > div {
-    flex: 50%;
-  }
+  row-gap: 50px;
+  column-gap: 50px;
 
   .skills-wrapper {
+    // margin-top: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -50,6 +33,10 @@
 @media (max-width: 768px) {
   .content-wrapper {
     flex-wrap: wrap;
+
+    .skills-wrapper {
+      flex-grow: 1;
+    }
   }
 }
 </style>

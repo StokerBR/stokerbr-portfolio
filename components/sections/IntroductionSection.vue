@@ -28,7 +28,7 @@
         </a>
       </div>
     </div>
-    <span class="name">Henrique</span>
+    <h1 class="name">Henrique</h1>
     <div class="details">
       <div class="stokerbr">
         <span class="stokerbr-text aka">AKA</span>
@@ -41,6 +41,10 @@
 
 <style lang="scss" scoped>
 @import '@/assets/scss/components/stokerbr-text.scss';
+
+h1 {
+  margin: unset;
+}
 
 .introduction {
   .top {

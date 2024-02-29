@@ -180,6 +180,12 @@
     "link": "https://www.postman.com"
   },
   {
+    "name": "CodeIgniter",
+    "icon": "codeigniter.svg",
+    "size": 1,
+    "link": "https://codeigniter.com"
+  },
+  {
     "name": "Apache",
     "icon": "apache.svg",
     "size": 1,
