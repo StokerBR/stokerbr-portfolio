@@ -6,8 +6,11 @@
       :class="`size-${skill.size}`"
       :title="technology(skill).name"
     >
-      <a :href="skill.link" target="_blank">
-        <img :src="images[technology(skill).icon]" :alt="skill.name" />
+      <a :href="technology(skill).link" target="_blank">
+        <img
+          :src="images[technology(skill).icon]"
+          :alt="technology(skill).name"
+        />
       </a>
     </div>
   </div>
