@@ -101,16 +101,12 @@ defineExpose({
         { active: bubbleHover.active },
         bubbleHover.class,
       ]"
-      @mouseover="props.interactive ? () => handleBubbleHover(index) : null"
-      @mouseout="props.interactive ? handleBubbleHoverOut : null"
-      @click="
+      v-on="
         props.interactive
-          ? () => {
-              if (isMobile()) {
-                onClickMobile(index);
-              } else {
-                onClick(index);
-              }
+          ? {
+              mouseover: () => handleBubbleHover(index),
+              mouseout: handleBubbleHoverOut,
+              click: () => (isMobile() ? onClickMobile(index) : onClick(index)),
             }
           : null
       "
