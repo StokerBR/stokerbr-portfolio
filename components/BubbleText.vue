@@ -18,6 +18,10 @@ const props = defineProps({
     type: Number,
     default: 3,
   },
+  interactive: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 const bubbleHovers = ref([]);
@@ -97,16 +101,18 @@ defineExpose({
         { active: bubbleHover.active },
         bubbleHover.class,
       ]"
-      @mouseover="() => handleBubbleHover(index)"
-      @mouseout="handleBubbleHoverOut"
+      @mouseover="props.interactive ? () => handleBubbleHover(index) : null"
+      @mouseout="props.interactive ? handleBubbleHoverOut : null"
       @click="
-        () => {
-          if (isMobile()) {
-            onClickMobile(index);
-          } else {
-            onClick(index);
-          }
-        }
+        props.interactive
+          ? () => {
+              if (isMobile()) {
+                onClickMobile(index);
+              } else {
+                onClick(index);
+              }
+            }
+          : null
       "
       >{{ bubbleHover.char }}</span
     >

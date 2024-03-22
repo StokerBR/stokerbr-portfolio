@@ -1,200 +1,134 @@
 [
   {
-    "name": "Laravel",
-    "icon": "laravel.svg",
-    "size": 3,
-    "link": "https://laravel.com/"
+    "technology": "laravel",
+    "size": 3
   },
   {
-    "name": "PHP",
-    "icon": "php.svg",
-    "size": 1,
-    "link": "https://www.php.net/"
+    "technology": "php",
+    "size": 1
   },
   {
-    "name": "JavaScript",
-    "icon": "javascript.svg",
-    "size": 2,
-    "link": "https://www.javascript.com/"
+    "technology": "javascript",
+    "size": 2
   },
   {
-    "name": "TypeScript",
-    "icon": "typescript.svg",
-    "size": 1,
-    "link": "https://www.typescriptlang.org/"
+    "technology": "typescript",
+    "size": 1
   },
   {
-    "name": "Vue.js",
-    "icon": "vuejs.svg",
-    "size": 3,
-    "link": "https://vuejs.org/"
+    "technology": "vuejs",
+    "size": 3
   },
   {
-    "name": "Nuxt.js",
-    "icon": "nuxtjs.svg",
-    "size": 2,
-    "link": "https://nuxt.com"
+    "technology": "nuxtjs",
+    "size": 2
   },
   {
-    "name": "jQuery",
-    "icon": "jquery.svg",
-    "size": 2,
-    "link": "https://jquery.com/"
+    "technology": "jquery",
+    "size": 2
   },
   {
-    "name": "Node.js",
-    "icon": "nodejs.svg",
-    "size": 2,
-    "link": "https://nodejs.org/"
+    "technology": "nodejs",
+    "size": 2
   },
   {
-    "name": "Nest.js",
-    "icon": "nestjs.svg",
-    "size": 1,
-    "link": "https://nestjs.com/"
+    "technology": "nestjs",
+    "size": 1
   },
   {
-    "name": "React",
-    "icon": "react.svg",
-    "size": 1,
-    "link": "https://reactjs.org/"
+    "technology": "react",
+    "size": 1
   },
   {
-    "name": "Flutter",
-    "icon": "flutter.svg",
-    "size": 3,
-    "link": "https://flutter.dev/"
+    "technology": "flutter",
+    "size": 3
   },
   {
-    "name": "Dart",
-    "icon": "dart.svg",
-    "size": 1,
-    "link": "https://dart.dev/"
+    "technology": "dart",
+    "size": 1
   },
   {
-    "name": "Java",
-    "icon": "java.svg",
-    "size": 1,
-    "link": "https://www.java.com/"
+    "technology": "java",
+    "size": 1
   },
   {
-    "name": "HTML5",
-    "icon": "html5.svg",
-    "size": 1,
-    "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+    "technology": "html5",
+    "size": 1
   },
   {
-    "name": "CSS3",
-    "icon": "css3.svg",
-    "size": 1,
-    "link": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+    "technology": "css3",
+    "size": 1
   },
   {
-    "name": "Sass",
-    "icon": "sass.svg",
-    "size": 2,
-    "link": "https://sass-lang.com/"
+    "technology": "sass",
+    "size": 2
   },
   {
-    "name": "Tailwind CSS",
-    "icon": "tailwindcss.svg",
-    "size": 2,
-    "link": "https://tailwindcss.com/"
+    "technology": "tailwind",
+    "size": 2
   },
   {
-    "name": "Bootstrap",
-    "icon": "bootstrap.svg",
-    "size": 2,
-    "link": "https://getbootstrap.com/"
+    "technology": "bootstrap",
+    "size": 2
   },
   {
-    "name": "PostgreSQL",
-    "icon": "postgresql.svg",
-    "size": 3,
-    "link": "https://www.postgresql.org/"
+    "technology": "postgresql",
+    "size": 3
   },
   {
-    "name": "MySQL",
-    "icon": "mysql.svg",
-    "size": 1,
-    "link": "https://www.mysql.com/"
+    "technology": "mysql",
+    "size": 1
   },
   {
-    "name": "MongoDB",
-    "icon": "mongodb.svg",
-    "size": 1,
-    "link": "https://www.mongodb.com/"
+    "technology": "mongodb",
+    "size": 1
   },
   {
-    "name": "Python",
-    "icon": "python.svg",
-    "size": 2,
-    "link": "https://www.python.org/"
+    "technology": "python",
+    "size": 2
   },
   {
-    "name": "Django",
-    "icon": "django.svg",
-    "size": 1,
-    "link": "https://www.djangoproject.com/"
+    "technology": "django",
+    "size": 1
   },
   {
-    "name": "Flask",
-    "icon": "flask.svg",
-    "size": 1,
-    "link": "https://flask.palletsprojects.com/"
+    "technology": "flask",
+    "size": 1
   },
   {
-    "name": "C++",
-    "icon": "cpp.svg",
-    "size": 1,
-    "link": "https://www.cplusplus.com/"
+    "technology": "cpp",
+    "size": 1
   },
   {
-    "name": "C",
-    "icon": "c.svg",
-    "size": 1,
-    "link": "https://www.cprogramming.com/"
+    "technology": "c",
+    "size": 1
   },
   {
-    "name": "Git",
-    "icon": "git.svg",
-    "size": 2,
-    "link": "https://git-scm.com/"
+    "technology": "git",
+    "size": 2
   },
   {
-    "name": "Docker",
-    "icon": "docker.svg",
-    "size": 2,
-    "link": "https://www.docker.com/"
+    "technology": "docker",
+    "size": 2
   },
   {
-    "name": "Linux",
-    "icon": "linux.svg",
-    "size": 2,
-    "link": "https://www.linux.org/"
+    "technology": "linux",
+    "size": 2
   },
   {
-    "name": "Postman",
-    "icon": "postman.svg",
-    "size": 1,
-    "link": "https://www.postman.com"
+    "technology": "postman",
+    "size": 1
   },
   {
-    "name": "CodeIgniter",
-    "icon": "codeigniter.svg",
-    "size": 1,
-    "link": "https://codeigniter.com"
+    "technology": "codeigniter",
+    "size": 1
   },
   {
-    "name": "Apache",
-    "icon": "apache.svg",
-    "size": 1,
-    "link": "https://httpd.apache.org/"
+    "technology": "apache",
+    "size": 1
   },
   {
-    "name": "Nginx",
-    "icon": "nginx.svg",
-    "size": 1,
-    "link": "https://www.nginx.com/"
+    "technology": "nginx",
+    "size": 1
   }
 ]

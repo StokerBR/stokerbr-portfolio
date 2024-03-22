@@ -1,3 +1,5 @@
+import { basename } from 'path';
+
 /**
  * Returns a promise that resolves after a given amount of time
  * @param {*} ms
@@ -21,4 +23,17 @@ export function isMobile() {
   } else {
     return false;
   }
+}
+
+/**
+ * Get the icons of the technologies
+ * @returns Object
+ */
+export function getTechnologiesImages() {
+  const glob = import.meta.glob('~/assets/images/technologies/*.svg', {
+    eager: true,
+  });
+  return Object.fromEntries(
+    Object.entries(glob).map(([key, value]) => [basename(key), value.default])
+  );
 }

@@ -23,6 +23,11 @@ export default defineNuxtConfig({
     ],
   },
   vite: {
+    resolve: {
+      alias: {
+        path: 'path-browserify',
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {
