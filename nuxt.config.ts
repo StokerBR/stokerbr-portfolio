@@ -1,23 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image'],
   components: [
     { path: '~/components', extensions: ['vue'] },
     { path: '~/components/sections', extensions: ['vue'] },
   ],
   i18n: {
     vueI18n: './i18n.config.ts',
-    precompile: {
-      strictMessage: false,
-    },
     locales: [
       {
         code: 'en',
+        iso: 'en-US',
         name: 'English',
       },
       {
         code: 'pt',
+        iso: 'pt-BR',
         name: 'Português',
       },
     ],
@@ -38,7 +37,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'StokerBR',
+      title: 'Henrique Costa',
       meta: [
         {
           name: 'description',

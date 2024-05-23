@@ -36,7 +36,6 @@ const props = defineProps({
 
   &:not(.secondary)::before {
     position: relative;
-    bottom: 1px;
     counter-increment: section 1;
     content: '0' counter(section) '.';
     margin-right: 10px;

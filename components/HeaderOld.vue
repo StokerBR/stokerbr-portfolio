@@ -1,21 +1,19 @@
 <template>
   <header
     :class="{
-      hidden: isHidden,
-      transparent: isTransparent,
+      /* hidden: isHidden */
     }"
   >
     <div class="header-inner">
       <div class="header-left">
-        <!-- <BubbleText
+        <BubbleText
           ref="bubbleText"
           text="StokerBR"
           class="stokerbr-text"
           element="h3"
           :startupEffect="true"
           @click="scrollToTop"
-        /> -->
-        <div class="logo" @click="scrollToTop">H</div>
+        />
       </div>
       <LanguageSwitch />
       <div class="blur"></div>
@@ -27,7 +25,6 @@
 const bubbleText = ref();
 const isTransparent = ref(true);
 const isHidden = ref(false);
-const isTop = ref(true);
 let lastScrollY = 0;
 
 onMounted(() => {
@@ -44,11 +41,10 @@ onUnmounted(() => {
 // Handles the scroll event
 function handleScroll() {
   // Makes the header background transparent when at the top of the page
-  // isTransparent.value = window.scrollY == 0;
-  isTransparent.value = window.scrollY <= 50;
+  isTransparent.value = window.scrollY == 0;
 
   // Hides the header when scrolling down and shows it when scrolling up
-  if (window.scrollY > lastScrollY && window.scrollY > 50) {
+  if (window.scrollY > lastScrollY) {
     isHidden.value = true;
   } else {
     isHidden.value = false;
@@ -84,54 +80,30 @@ header {
     justify-content: center;
     height: 50px;
     width: 100%;
-    // margin: 15px;
+    margin: 15px;
     padding: 15px;
-    // border: 1px solid $primary-color;
-    // border-radius: 5px;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
     // box-shadow: $neon-box-shadow, inset $neon-box-shadow;
     // background-color: $background-color;
-    // box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-size: 24px;
     font-weight: 600;
     transition: all 0.2s;
-    background-color: rgba($background-color, 0.8);
+    background-color: rgba(0, 30, 64, 0.85);
     backdrop-filter: blur(10px);
 
     .header-left {
-      height: 100%;
-      position: relative;
       margin-right: auto;
 
-      .logo {
-        aspect-ratio: 1;
-        height: 100%;
-        background-color: rgba($dark-color, 0.9);
-        border: 1px solid $primary-color;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.1s;
-        cursor: pointer;
-        color: $primary-color;
-        font-stretch: 125%;
-        font-weight: 900;
-        font-size: 28px;
-
-        &:hover {
-          background-color: rgba($secondary-color, 0.9);
-        }
-      }
-
-      /* .stokerbr-text {
+      .stokerbr-text {
         font-size: 28px;
         cursor: pointer;
         user-select: none;
-      } */
+      }
     }
 
-    /* @media (min-width: 768px) {
+    @media (min-width: 768px) {
       max-width: 750px;
     }
     @media (min-width: 992px) {
@@ -139,11 +111,7 @@ header {
     }
     @media (min-width: 1200px) {
       max-width: 1170px;
-    } */
-  }
-
-  &.transparent .header-inner {
-    background-color: unset;
+    }
   }
 }
 </style>

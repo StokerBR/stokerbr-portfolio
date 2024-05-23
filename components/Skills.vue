@@ -7,9 +7,10 @@
       :title="technology(skill).name"
     >
       <a :href="technology(skill).link" target="_blank">
-        <img
-          :src="images[technology(skill).icon]"
+        <NuxtImg
+          :src="'images/technologies/' + technology(skill).icon"
           :alt="technology(skill).name"
+          loading="lazy"
         />
       </a>
     </div>
@@ -19,9 +20,9 @@
 <script setup>
 import skills from '@/data/skills.json';
 import technologies from '@/data/technologies.json';
-import { getTechnologiesImages } from '~/assets/utils/functions';
+// import { getTechnologiesImages } from '~/assets/utils/functions';
 
-const images = getTechnologiesImages();
+// const images = getTechnologiesImages();
 
 // Get the technology object from the skill object
 function technology(skill) {

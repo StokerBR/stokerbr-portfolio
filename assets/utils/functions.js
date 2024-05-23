@@ -37,3 +37,16 @@ export function getTechnologiesImages() {
     Object.entries(glob).map(([key, value]) => [basename(key), value.default])
   );
 }
+
+/**
+ * Get the images of the projects
+ * @returns Object
+ */
+export function getProjectsImages() {
+  const glob = import.meta.glob('~/assets/images/projects/**/*', {
+    eager: true,
+  });
+  return Object.fromEntries(
+    Object.entries(glob).map(([key, value]) => [basename(key), value.default])
+  );
+}
