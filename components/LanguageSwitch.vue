@@ -25,6 +25,13 @@
 const { locale } = useI18n();
 const checked = ref(locale.value == 'pt');
 
+// Set the html lang attr to the i18n locale
+useHead({
+  htmlAttrs: {
+    lang: locale.value,
+  },
+});
+
 watch(checked, (value) => {
   if (value) {
     locale.value = 'pt';

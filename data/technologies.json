@@ -1,0 +1,167 @@
+{
+  "laravel": {
+    "name": "Laravel",
+    "icon": "laravel.svg",
+    "link": "https://laravel.com/"
+  },
+  "php": {
+    "name": "PHP",
+    "icon": "php.svg",
+    "link": "https://www.php.net/"
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "icon": "javascript.svg",
+    "link": "https://www.javascript.com/"
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "icon": "typescript.svg",
+    "link": "https://www.typescriptlang.org/"
+  },
+  "vuejs": {
+    "name": "Vue.js",
+    "icon": "vuejs.svg",
+    "link": "https://vuejs.org/"
+  },
+  "nuxtjs": {
+    "name": "Nuxt.js",
+    "icon": "nuxtjs.svg",
+    "link": "https://nuxt.com"
+  },
+  "jquery": {
+    "name": "jQuery",
+    "icon": "jquery.svg",
+    "link": "https://jquery.com/"
+  },
+  "nodejs": {
+    "name": "Node.js",
+    "icon": "nodejs.svg",
+    "link": "https://nodejs.org/"
+  },
+  "nestjs": {
+    "name": "Nest.js",
+    "icon": "nestjs.svg",
+    "link": "https://nestjs.com/"
+  },
+  "react": {
+    "name": "React",
+    "icon": "react.svg",
+    "link": "https://reactjs.org/"
+  },
+  "flutter": {
+    "name": "Flutter",
+    "icon": "flutter.svg",
+    "link": "https://flutter.dev/"
+  },
+  "dart": {
+    "name": "Dart",
+    "icon": "dart.svg",
+    "link": "https://dart.dev/"
+  },
+  "java": {
+    "name": "Java",
+    "icon": "java.svg",
+    "link": "https://www.java.com/"
+  },
+  "html5": {
+    "name": "HTML5",
+    "icon": "html5.svg",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+  },
+  "css3": {
+    "name": "CSS3",
+    "icon": "css3.svg",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+  },
+  "sass": {
+    "name": "Sass",
+    "icon": "sass.svg",
+    "link": "https://sass-lang.com/"
+  },
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "icon": "tailwindcss.svg",
+    "link": "https://tailwindcss.com/"
+  },
+  "bootstrap": {
+    "name": "Bootstrap",
+    "icon": "bootstrap.svg",
+    "link": "https://getbootstrap.com/"
+  },
+  "postgresql": {
+    "name": "PostgreSQL",
+    "icon": "postgresql.svg",
+    "link": "https://www.postgresql.org/"
+  },
+  "mysql": {
+    "name": "MySQL",
+    "icon": "mysql.svg",
+    "link": "https://www.mysql.com/"
+  },
+  "mongodb": {
+    "name": "MongoDB",
+    "icon": "mongodb.svg",
+    "link": "https://www.mongodb.com/"
+  },
+  "python": {
+    "name": "Python",
+    "icon": "python.svg",
+    "link": "https://www.python.org/"
+  },
+  "django": {
+    "name": "Django",
+    "icon": "django.svg",
+    "link": "https://www.djangoproject.com/"
+  },
+  "flask": {
+    "name": "Flask",
+    "icon": "flask.svg",
+    "link": "https://flask.palletsprojects.com/"
+  },
+  "cpp": {
+    "name": "C++",
+    "icon": "cpp.svg",
+    "link": "https://www.cplusplus.com/"
+  },
+  "c": {
+    "name": "C",
+    "icon": "c.svg",
+    "link": "https://www.cprogramming.com/"
+  },
+  "git": {
+    "name": "Git",
+    "icon": "git.svg",
+    "link": "https://git-scm.com/"
+  },
+  "docker": {
+    "name": "Docker",
+    "icon": "docker.svg",
+    "link": "https://www.docker.com/"
+  },
+  "linux": {
+    "name": "Linux",
+    "icon": "linux.svg",
+    "link": "https://www.linux.org/"
+  },
+  "postman": {
+    "name": "Postman",
+    "icon": "postman.svg",
+    "link": "https://www.postman.com"
+  },
+  "codeigniter": {
+    "name": "CodeIgniter",
+    "icon": "codeigniter.svg",
+    "link": "https://codeigniter.com"
+  },
+  "apache": {
+    "name": "Apache",
+    "icon": "apache.svg",
+    "link": "https://httpd.apache.org/"
+  },
+  "nginx": {
+    "name": "Nginx",
+    "icon": "nginx.svg",
+    "link": "https://www.nginx.com/"
+  }
+}

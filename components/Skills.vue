@@ -4,10 +4,14 @@
       v-for="(skill, index) in skills"
       :key="index"
       :class="`size-${skill.size}`"
-      :title="skill.name"
+      :title="technology(skill).name"
     >
-      <a :href="skill.link" target="_blank">
-        <img :src="`/technologies/${skill.icon}`" :alt="skill.name" />
+      <a :href="technology(skill).link" target="_blank">
+        <NuxtImg
+          :src="'images/technologies/' + technology(skill).icon"
+          :alt="technology(skill).name"
+          loading="lazy"
+        />
       </a>
     </div>
   </div>
@@ -15,6 +19,15 @@
 
 <script setup>
 import skills from '@/data/skills.json';
+import technologies from '@/data/technologies.json';
+// import { getTechnologiesImages } from '~/assets/utils/functions';
+
+// const images = getTechnologiesImages();
+
+// Get the technology object from the skill object
+function technology(skill) {
+  return technologies[skill.technology];
+}
 </script>
 
 <style lang="scss" scoped>

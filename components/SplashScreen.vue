@@ -4,6 +4,7 @@
       ref="bubbleText"
       text="StokerBR"
       class="stokerbr-text loading fadein"
+      :interactive="false"
     />
   </div>
 </template>
@@ -20,8 +21,8 @@ const props = defineProps({
 const bubbleText = ref(null);
 
 async function loading() {
-  await timeout(500);
-  while (props.showSplash) {
+  await timeout(200);
+  while (props.showSplash && bubbleText.value) {
     bubbleText.value.runWaveEffect();
     await timeout(2000);
   }

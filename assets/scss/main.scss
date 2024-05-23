@@ -8,6 +8,7 @@ body,
   font-stretch: 125%;
   color: $text-color;
   position: relative;
+  counter-reset: section;
 }
 
 body {
