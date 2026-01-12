@@ -7,17 +7,23 @@ export default defineNuxtConfig({
     { path: '~/components/sections', extensions: ['vue'] },
   ],
   i18n: {
-    vueI18n: './i18n.config.ts',
+    defaultLocale: 'en',
+    compilation: {
+      strictMessage: false,
+      escapeHtml: false,
+    },
     locales: [
       {
         code: 'en',
         iso: 'en-US',
         name: 'English',
+        file: 'en.json',
       },
       {
         code: 'pt',
         iso: 'pt-BR',
         name: 'Português',
+        file: 'pt.json',
       },
     ],
   },
