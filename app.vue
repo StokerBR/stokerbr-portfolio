@@ -12,6 +12,7 @@
         <p class="soon">{{ $t('under_construction') }}</p>
       </div>
       <AboutSection />
+      <ProjectsSection />
     </div>
   </transition>
 </template>

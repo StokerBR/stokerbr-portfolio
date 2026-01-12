@@ -1,0 +1,23 @@
+{
+  "calcponto": {
+    "name": "CalcPonto",
+    "description": {
+      "pt": "CalcPonto é um aplicativo para cálculo de horas trabalhadas. Com ele você pode calcular o total de horas trabalhadas, o total de horas extras e o total de horas de almoço.",
+      "en": "CalcPonto is an application for calculating worked hours. With it you can calculate the total hours worked, the total extra hours and the total lunch hours."
+    },
+    "images": [
+      "calcponto/screenshot.png",
+      "calcponto/calcponto.stokerbr.com_ (1).png",
+      "calcponto/calcponto.stokerbr.com_ (2).png"
+    ],
+    "year": 2023,
+    "made_at": null,
+    "technologies": ["Java", "Android"],
+    "links": [
+      {
+        "name": "Site",
+        "url": "https://calcponto.stokerbr.com"
+      }
+    ]
+  }
+}
