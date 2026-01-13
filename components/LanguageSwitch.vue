@@ -42,6 +42,8 @@ watch(checked, (value) => {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/scss/variables.scss";
+
 .languages {
   display: flex;
   flex-direction: row;
