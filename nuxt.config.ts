@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@nuxt/image'],
+  css: ['~/assets/scss/app.scss'],
   components: [
     { path: '~/components', extensions: ['vue'] },
     { path: '~/components/sections', extensions: ['vue'] },
@@ -36,7 +37,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/scss/app.scss";',
+          additionalData: '@import "@/assets/scss/variables.scss";',
         },
       },
     },
