@@ -38,7 +38,9 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "${fileURLToPath(new URL('./assets/scss/_shared.scss', import.meta.url))}" as *;`,
+          api: 'modern-compiler',
+          includePaths: [fileURLToPath(new URL('./', import.meta.url))],
+          additionalData: '@use "assets/scss/_shared.scss" as *;',
         },
       },
     },
