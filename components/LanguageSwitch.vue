@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-const { locale } = useI18n();
+const { locale, setLocale } = useI18n();
 const checked = ref(locale.value == 'pt');
 
 // Set the html lang attr to the i18n locale
@@ -34,9 +34,9 @@ useHead({
 
 watch(checked, (value) => {
   if (value) {
-    locale.value = 'pt';
+    setLocale('pt');
   } else {
-    locale.value = 'en';
+    setLocale('en');
   }
 });
 </script>

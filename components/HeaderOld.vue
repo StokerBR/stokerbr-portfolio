@@ -58,7 +58,7 @@ function scrollToTop() {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/components/stokerbr-text.scss';
+@use '@/assets/scss/components/stokerbr-text.scss';
 
 header {
   display: flex;
