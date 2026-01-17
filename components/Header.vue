@@ -7,14 +7,6 @@
   >
     <div class="header-inner">
       <div class="header-left">
-        <!-- <BubbleText
-          ref="bubbleText"
-          text="StokerBR"
-          class="stokerbr-text"
-          element="h3"
-          :startupEffect="true"
-          @click="scrollToTop"
-        /> -->
         <div class="logo" @click="scrollToTop">H</div>
       </div>
       <LanguageSwitch />
@@ -24,15 +16,11 @@
 </template>
 
 <script setup>
-const bubbleText = ref();
 const isTransparent = ref(true);
 const isHidden = ref(false);
-const isTop = ref(true);
 let lastScrollY = 0;
 
 onMounted(() => {
-  // bubbleText.value.runWaveEffect();
-
   lastScrollY = window.scrollY;
   handleScroll();
   window.addEventListener('scroll', handleScroll);
@@ -44,11 +32,10 @@ onUnmounted(() => {
 // Handles the scroll event
 function handleScroll() {
   // Makes the header background transparent when at the top of the page
-  // isTransparent.value = window.scrollY == 0;
   isTransparent.value = window.scrollY <= 50;
 
   // Hides the header when scrolling down and shows it when scrolling up
-  if (window.scrollY > lastScrollY && window.scrollY > 50) {
+  if (window.scrollY > lastScrollY && window.scrollY >= 50) {
     isHidden.value = true;
   } else {
     isHidden.value = false;
@@ -62,8 +49,6 @@ function scrollToTop() {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/components/stokerbr-text.scss';
-
 header {
   display: flex;
   justify-content: center;

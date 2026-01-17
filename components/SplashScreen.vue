@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/components/stokerbr-text.scss';
+@use '@/assets/scss/components/stokerbr-text.scss';
 
 .loader {
   display: flex;

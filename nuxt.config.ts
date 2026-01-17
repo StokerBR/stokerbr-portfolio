@@ -36,11 +36,12 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/scss/app.scss";',
+          additionalData: '@use "@/assets/scss/_shared.scss" as *;',
         },
       },
     },
   },
+  css: ['~/assets/scss/global.scss'],
   app: {
     head: {
       title: 'Henrique Costa',
