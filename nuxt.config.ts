@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { fileURLToPath } from 'node:url';
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@nuxt/image'],
@@ -37,7 +38,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/scss/_shared.scss" as *;',
+          additionalData: `@use "${fileURLToPath(new URL('./assets/scss/_shared.scss', import.meta.url))}" as *;`,
         },
       },
     },
