@@ -108,7 +108,7 @@ defineExpose({
               mouseout: handleBubbleHoverOut,
               click: () => (isMobile() ? onClickMobile(index) : onClick(index)),
             }
-          : null
+          : {}
       "
       >{{ bubbleHover.char }}</span
     >

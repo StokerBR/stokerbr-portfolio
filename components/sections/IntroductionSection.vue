@@ -40,7 +40,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/components/stokerbr-text.scss';
+@use '@/assets/scss/components/stokerbr-text.scss';
 
 h1 {
   margin: unset;
