@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@nuxt/image'],
-  css: ['~/assets/scss/app.scss'],
+  css: ['~/assets/scss/global.scss'],
   components: [
     { path: '~/components', extensions: ['vue'] },
     { path: '~/components/sections', extensions: ['vue'] },
@@ -42,7 +42,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['~/assets/scss/global.scss'],
   app: {
     head: {
       title: 'Henrique Costa',
