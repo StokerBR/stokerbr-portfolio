@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { fileURLToPath } from 'node:url';
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@nuxt/image'],
@@ -38,12 +37,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler',
-          includePaths: [fileURLToPath(new URL('./', import.meta.url))],
-          additionalData: '@use "assets/scss/_shared.scss" as *;',
-        },
-      },
-    },
+          additionalData: '@use "~/assets/scss/variables.scss" as *;'
+        }
+      }
+    }
   },
   app: {
     head: {
