@@ -49,8 +49,6 @@ function scrollToTop() {
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/scss/variables.scss" as *;
-
 header {
   display: flex;
   justify-content: center;
