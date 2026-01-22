@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-const showSplash = ref(process.env.NODE_ENV == 'production');
+const showSplash = ref(false /* process.env.NODE_ENV == 'production' */);
 const mouse = ref({ x: 0, y: 0 });
 
 onMounted(() => {
